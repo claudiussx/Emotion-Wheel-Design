@@ -1,0 +1,58 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+.container
+{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+}
+.container .icon{
+    position: relative;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.container .icon .imgBox
+{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.5s;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 0 4px #222,
+    0 0 0 6px #fff;
+    transform: rotate(calc(360deg/8 * var(--i)));
+    transform-origin: 340px;
+    z-index: 100;
+    overflow: hidden;
+}
+.container .icon .imgBox.active
+{
+    box-shadow: 0 0 0 4px #222,
+    0 0 0 12px rgb(87, 73, 112)
+}
+.container .icon .imgBox img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotate(calc(360deg/8 * var(--i)));
+    transition:  0.5s;
+}
